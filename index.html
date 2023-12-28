@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>ShopCart Cursos IT</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="./index.html">
+            <h1 class="titulo1">ShopCart Cursos IT</h1>
+        </a>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <br>
+        <h2 class="titulo2">Cursos a elegir:</h2><br>
+        <div class="contenedor-principal-cursos">
+
+            <div class="producto">
+                <img class="img-cursos" src="./imgs/curso-html.jpg" alt="cursohtml">
+                <p class="p-cursos">HTML5 <br> $500 </p>
+                <button onclick="agregarCarrito('HTML5', 500)" class="btn-comprar">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img class="img-cursos" src="./imgs/curso-css.jpg" alt="cursocss">
+                <p class="p-cursos">CSS3 <br> $500 </p>
+                <button onclick="agregarCarrito('CSS3', 500)" class="btn-comprar">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img class="img-cursos" src="./imgs/curso-marketing-digital.jpg" alt="cursomarketing">
+                <p class="p-cursos">Marketing Digital <br> $200</p>
+                <button onclick="agregarCarrito('Marketing Digital', 200)" class="btn-comprar">Agregar al
+                    carrito</button>
+            </div>
+
+            <div class="producto">
+                <img class="img-cursos" src="./imgs/Thumb-Bootstrap-5-Youtube-1536x864.jpg" alt="cursobootstrap">
+                <p class="p-cursos">BOOTSTRAP5 <br> $500 </p>
+                <button onclick="agregarCarrito('BootStrap5', 500)" class="btn-comprar">Agregar al carrito</button>
+            </div>
+            <div>
+                <br>
+                <hr>
+                <br>
+                <div class="lista-compra">
+                    <h4 class="titulo-lista-carrito">Lista del carrito:</h4><br>
+                    <div id="carrito"></div>
+
+                    <div id="total">Total: $0.00</div>
+
+                    <button onclick="mostrarForm()" class="btn-finalizar">FINALIZAR COMPRA</button><br><br><br>
+
+                    <div id="Form">
+                        <h2>Finaliza tu compra!</h2><br>
+                        <form id="validacionForm">
+                            <label for="nombre">Nombre Completo:</label><br>
+                            <input type="text" id="nombre" name="nombre" required><br>
+
+                            <label for="dni">DNI:</label><br>
+                            <input type="number" id="dni" name="dni" required><br>
+
+                            <label for="card">N° Tarjeta:</label><br>
+                            <input type="number" id="card" name="card" required><br>
+
+                            <label for="cardPassword">Clave:</label><br>
+                            <input type="password" id="cardPassword" name="cardPassword" required><br>
+
+                            <label for="telefono">Teléfono:</label><br>
+                            <input type="number" id="telefono" name="telefono" required><br>
+
+                            <br><br><button class="btn-completar" type="button"
+                                onclick="CompletarCompra()">PAGAR!</button>
+                        </form>
+
+                        <div id="mensaje">Compra realizada con éxito</div>
+                    </div>
+
+                    <div id="popup" class="popup"></div>
+                </div>
+            </div>
+
+        </div>
+        <div id="boton_arriba" onclick="boton_arriba()"><i class="bi bi-arrow-up-circle"></i></div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <a href="./index.html">
+            <h4 class="titulo-footer">SHOPRCART CURSOS IT</h4>
+        </a>
+        <div class="contenedor-redes">
+            <p class="p-redes">Redes sociales</p>
+            <div><img class="img-footer" src="./imgs/logofb.png" alt="facebook">
+                <img class="img-footer" src="./imgs/logoinsta.png" alt="instagram">
+                <img class="img-footer" src="./imgs/logo-linkedin-2.png" alt="linkedin">
+                <img class="img-footer" src="./imgs/logogithub.png" alt="github">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
